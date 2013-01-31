@@ -142,7 +142,8 @@ public class FTPUtil
 					return null;
 				}
 			}
-			if (ftpClient.listNames(new String(fileName.getBytes("GBK"), "iso-8859-1")).length > 0)
+			String[] listNames = ftpClient.listNames(new String(fileName.getBytes("GBK"), "iso-8859-1"));
+			if (listNames != null && listNames.length > 0)
 			{
 				System.out.println("file name exist, generate new file name");
 				int lastIndex = fileName.lastIndexOf(DOT);
