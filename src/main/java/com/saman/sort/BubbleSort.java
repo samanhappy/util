@@ -14,7 +14,7 @@ package com.saman.sort;
  * @author Administrator
  * 
  */
-public class BubbleSort {
+public class BubbleSort extends BasicUtil{
 
 	public static void sort1(int[] array) {
 
@@ -63,10 +63,5 @@ public class BubbleSort {
 		sort2(array2);
 	}
 
-	public static void display(int[] array) {
-		for (int i = 0; i < array.length; i++) {
-			System.out.print(array[i] + ",");
-		}
-		System.out.println();
-	}
+	
 }
