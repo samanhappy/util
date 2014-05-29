@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="D:\\sunmeng\\jar\\ojdbc6-11.2.0.1.0.jar" />
+	<context id="context1">
+		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+			connectionURL="jdbc:oracle:thin:@192.168.10.223:1521:hddb" userId="surf"
+			password="surf" />
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<javaModelGenerator targetPackage="com.zte.smart.community.bean"
+			targetProject="src/main/java" />
+		<sqlMapGenerator targetPackage="com.zte.smart.community.bean"
+			targetProject="src/main/java" />
+		<javaClientGenerator targetPackage="com.zte.smart.community.mapper"
+			targetProject="src/main/java" type="XMLMAPPER" />
+
+		<table tableName="ZTE_SMART_COMMUNITY_POST" domainObjectName="SmartCommunityPost">
+			<generatedKey column="id"
+				sqlStatement="select SEQ_ZTE_COMMON.NEXTVAL AS ID from dual" />
+		</table>
+	</context>
+</generatorConfiguration>
