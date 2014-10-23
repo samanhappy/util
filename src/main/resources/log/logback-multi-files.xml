@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender"
+		Threshold="DEBUG">
+		<Encoding>GBK</Encoding>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%-20(%d{HH:mm:ss.SSS} [%thread]) %-5level %logger{0} -%msg%n
+			</pattern>
+		</layout>
+	</appender>
+
+
+	
+	
+	
+	
+	
+
+<appender name="shareCount"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>GBK</Encoding>
+		<file>/usr/local/program/surf/logs/suferDeskShareCount.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/usr/local/program/surf/logs/suferDeskShareCount.%d{yyyy-MM-dd}.log.zip
+			</fileNamePattern>
+			<maxHistory>1000</maxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%msg%n</pattern>
+		</layout>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+	</appender>
+
+	<appender name="file2count"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>GBK</Encoding>
+		<file>/usr/local/program/surf/logs/suferDeskInteFaceCount.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.SurfTimeBasedRollingPolicy">
+			<fileNamePattern>/usr/local/program/surf/logs/suferDeskInteFaceCount.%d{yyyyMMddHHmm}.log.zip
+			</fileNamePattern>
+			<maxHistory>43200</maxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%msg%n</pattern>
+		</layout>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+	</appender>
+	
+	<appender name="file2recommend"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>GBK</Encoding>
+		<file>/usr/local/program/surf/logs/suferDeskInteFaceCount4Recommend.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/usr/local/program/surf/logs/suferDeskInteFaceCount4Recommend.%d{yyyy-MM-dd}.log.zip
+			</fileNamePattern>
+			<maxHistory>1000</maxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%msg%n</pattern>
+		</layout>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+	</appender>
+	
+	<appender name="file2yixun"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>GBK</Encoding>
+		<file>/usr/local/program/surf/logs/suferDeskInteFaceCount4Yixun.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/usr/local/program/surf/logs/suferDeskInteFaceCount4Yixun.%d{yyyy-MM-dd}.log.zip
+			</fileNamePattern>
+			<maxHistory>1000</maxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%msg%n</pattern>
+		</layout>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+	</appender>
+	
+	<appender name="file2lottery"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>GBK</Encoding>
+		<file>/usr/local/program/surf/logs/suferDeskLottery.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/usr/local/program/surf/logs/suferDeskLottery.%d{yyyy-MM-dd}.log.zip
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%msg%n</pattern>
+		</layout>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+	</appender>
+	
+	
+	<appender name="file2Score"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>GBK</Encoding>
+		<file>/usr/local/program/surf/logs/suferDeskScore.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/usr/local/program/surf/logs/suferDeskScore.%d{yyyy-MM-dd}.log.zip
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%msg%n</pattern>
+		</layout>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+	</appender>
+	
+	<appender name="file2CountOper"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>GBK</Encoding>
+		<file>/usr/local/program/surf/logs/suferCountOperation.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/usr/local/program/surf/logs/suferCountOperation.%d{yyyy-MM-dd}.log.zip
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%msg%n</pattern>
+		</layout>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+	</appender>
+	
+	
+	<appender name="file2err"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>GBK</Encoding>
+		<file>/usr/local/program/surf/logs/surfdeskerr.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/usr/local/program/surf/logs/surfdeskerr.%d{yyyy-MM-dd}.log.zip
+			</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%msg%n</pattern>
+		</layout>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
+	</appender>
+	
+	
+	<logger name="com.c_platform.suferdesk.errutil" level="INFO">
+		<appender-ref ref="file2err" />
+	</logger>
+	
+	<logger name="com.c_platform.suferdesk.servlet.countoperation" level="INFO">
+		<appender-ref ref="file2CountOper" />
+	</logger>
+	
+	<logger name="com.c_platform.suferdesk.score" level="INFO">
+		<appender-ref ref="file2Score" />
+	</logger>
+	
+
+	<logger name="com.c_platform.suferdesk.util" level="INFO">
+		<appender-ref ref="file2count" />
+	</logger>
+	
+	<logger name="com.c_platform.suferdesk.execute.lottery" level="INFO">
+		<appender-ref ref="file2lottery" />
+	</logger>
+	
+	<logger name="com.c_platform.suferdesk.execute.share" level="INFO">
+		<appender-ref ref="shareCount" />
+	</logger>
+	
+	<logger name="com.c_platform.suferdesk.activity.yixun" level="INFO">
+		<appender-ref ref="file2yixun" />
+	</logger>
+	
+	<logger name="com.c_platform.suferdesk.recommend" level="INFO">
+		<appender-ref ref="file2recommend" />
+	</logger>
+	
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="STDOUT" />
+	</root>
+
+
+</configuration>
